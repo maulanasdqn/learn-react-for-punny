@@ -1,13 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+import { RecoilRoot } from "recoil";
+import ApiService from "./service/api";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+ApiService.init(process.env.REACT_APP_API_URL);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RecoilRoot>
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    </RecoilRoot>
   </React.StrictMode>
 );
 
