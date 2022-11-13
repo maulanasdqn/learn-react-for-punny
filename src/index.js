@@ -6,7 +6,7 @@ import "./index.css";
 import { RecoilRoot } from "recoil";
 import ApiService from "./service/api";
 
-ApiService.init(process.env.REACT_APP_API_URL);
+ApiService.init(process.env.REACT_APP_NEWS_API_URL);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

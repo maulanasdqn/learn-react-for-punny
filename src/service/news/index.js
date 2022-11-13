@@ -1,13 +1,19 @@
 import ApiService from "../api";
 
-const UserService = {
-  getUser: async function () {
+const NewsService = {
+  getNews: async function ({ q, sortBy, from }) {
     const requestData = {
       method: "get",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        "x-api-key": process.env.REACT_APP_NEWS_API_KEY,
       },
-      url: "/",
+      params: {
+        q,
+        sortBy,
+        from,
+      },
+      url: "/everything",
     };
 
     try {
@@ -18,4 +24,4 @@ const UserService = {
     }
   },
 };
-export { UserService };
+export { NewsService };

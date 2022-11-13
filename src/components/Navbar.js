@@ -2,7 +2,7 @@ import React from "react";
 import LogoReact from "../logo.svg";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ nama, umur }) => {
+const Navbar = () => {
   return (
     <header
       data-testid="header-nav"
@@ -20,9 +20,6 @@ const Navbar = ({ nama, umur }) => {
         <section className="flex gap-x-4 text-white" data-testid="auth">
           <span>Login</span>
           <span>Register</span>
-          <section className="flex items-center justify-center">
-            {nama + " " + umur}
-          </section>
         </section>
       </nav>
     </header>
