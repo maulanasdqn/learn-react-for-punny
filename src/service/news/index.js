@@ -5,7 +5,7 @@ const NewsService = {
     const requestData = {
       method: "get",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
         "x-api-key": process.env.REACT_APP_NEWS_API_KEY,
       },
       params: {
