@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { useRecoilValue } from "recoil";
 import { getNewsApi } from "../../store";
 
+
 export const GetNews = () => {
   const getNews = useRecoilValue(getNewsApi);
   return (
@@ -25,9 +26,9 @@ export const GetNews = () => {
                 <h1 className="font-bold text-sm truncate w-[100px]">
                   {news.title}
                 </h1>
-                <h1 className="font-bold text-xs truncate w-[100px]">
+                <a href={news.url} target="_blank" rel="noreferrer" className="font-bold text-xs truncate w-[100px]">
                   {news.url}
-                </h1>
+                </a>
               </div>
             </Fragment>
           ))}

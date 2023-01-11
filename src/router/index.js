@@ -1,11 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../views/Home";
+
+const Home = lazy(() => import("../views/Home"));
 
 const RouterPath = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Suspense>
+        <Route path="/" element={<Home />} />
+      </Suspense>
     </Routes>
   );
 };

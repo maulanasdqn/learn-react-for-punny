@@ -39,7 +39,7 @@ export const SearchNews = () => {
         className="border-2 border-blue-400 text-blue-400 rounded-lg w-full h-auto p-2"
       >
         Search
-      </button>{" "}
+      </button>
     </form>
   );
 };
